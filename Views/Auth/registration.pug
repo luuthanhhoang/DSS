@@ -1,0 +1,24 @@
+extends ../layout.pug
+
+block content
+	h1 Đăng ký tài khoản 
+
+	form(action='/auth/registration' method='POST')
+		if newErrors
+			each error in newErrors
+				.alert.alert-danger= error
+			
+		.form-group
+			label(for='name') Họ tên
+			input#name.form-control(type='text' placeholder='Họ tên' name='name')
+		.form-group
+			label(for='email') Email
+			input#email.form-control(type='email' placeholder='Email' name='email')
+		.form-group
+			label(for='password') Mật khẩu
+			input#password.form-control(type='password' placeholder='Mật khẩu' name = 'password')
+		.form-group
+			label(for='cfpassword') Xác nhận mật khẩu
+			input#cfpassword.form-control(type='password' placeholder='Xác nhận mật khẩu' name = 'cfPassword')
+		button.btn.btn-primary(type='submit') Đăng ký
+

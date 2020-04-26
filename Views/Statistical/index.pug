@@ -1,0 +1,28 @@
+extends ../layout.statistical.pug
+
+block content
+    h3.mb-3 Thống kê chi tiết > Nhân viên
+    .row.ml-5
+        .card.text-white.bg-success.mr-5(style='max-width: 18rem;')
+            .card-header Tổng nhân viên
+            .card-body
+                h5.card-title Tổng số: 1470 nhân viên
+                p.card-text Đang làm việc: 1233 (chiếm 83.1%) <br> Đã nghỉ việc: 237 (chiếm 16.9%)
+        .card.text-white.bg-danger.mr-5(style='max-width: 18rem;')
+            .card-header Đang làm việc
+            .card-body
+                h5.card-title Tổng số: 1233 nhân viên
+                p.card-text Nam: 732 (chiếm 59.4%) <br> Nữ: 501 (chiếm 40.6%)
+        .card.text-white.bg-primary.mr-5(style='max-width: 18rem;')
+            .card-header Đã nghỉ việc
+            .card-body
+                h5.card-title Tổng số: 237 nhân viên
+                p.card-text Nam: 150 (chiếm 63.3%) <br> Nữ: 87 (chiếm 36.7%)
+
+    h3.mt-3 Biểu đồ thống kê
+    .chart
+        #chart-nv 
+        #chart-dlv
+        #chart-dnv
+    h3 Danh sách nhân viên
+

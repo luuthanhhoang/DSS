@@ -1,0 +1,20 @@
+extends ../layout.pug
+
+block content
+	h1 Đăng nhập hệ thống
+	form(action='/auth/login' method='POST')
+		if errors
+			each error in errors
+				.alert.alert-danger= error
+
+		.form-group
+			label(for='email') Email
+			input#email.form-control(type='email' placeholder='Email' name='email' value= values ? values.email : "")
+		.form-group
+			label(for='password') Mật khẩu
+			input#password.form-control(type='password' placeholder='Mật khẩu' name='password' value= values ? values.password : "")
+		.form-check
+			input#check.form-check-input(type='checkbox' name='checkbox')
+			label(for='check') Lưu thông tin đăng nhập
+		button.btn.btn-primary(type='submit') Đăng nhập
+

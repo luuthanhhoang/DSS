@@ -1,0 +1,194 @@
+html
+	head
+		title Dự báo nhân sự
+		
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
+		link(href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet")
+		style.
+			.navbar-top-bgr{
+			display: flex;
+			background-color: rgba(0, 0, 0, 0.8); 
+			position: relative;
+			}
+
+			.form-inline{
+			position: absolute;
+			top: 0.85rem;
+			right: 4rem;
+			}
+			.navbar-top-bgr img{
+			height: 4rem;
+			width: 8rem;
+			margin-left: 3rem;
+			}
+
+			.navbar-menu ul{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			list-style: none;
+			margin: 0 3rem;
+			padding: 0;
+			}
+
+			.navbar-menu li{
+			margin-top: 1.2rem;
+			}
+
+			.navbar-menu li a{
+			text-decoration: none;
+			font-weight: 400;
+			text-shadow: 0.2px 0.2px #FFF;
+			color: #FFF;
+			padding: 1rem;
+			font-family: 'Roboto', sans-serif;
+			}
+			.footer-padding{
+			height: 60%;
+			background-color: #151515;
+			display: flex;
+			justify-content: center;
+			font-family: Open Sans;
+			padding: 50px 0;
+			margin-top: 50px; 
+			}
+
+			.footer-first-col{
+			color: hsla(0,0%,100%,.7);
+			width: 22%;
+			font-size: 14px;
+			padding: 0 12px;
+			}
+
+			.footer-first-col img{
+			width: 8rem;
+			height: 4rem;
+			margin-left: 3rem; 
+			}
+
+			.footer-first-col .footer-detail{
+			padding: 20px 0;
+			}
+
+			.footer-two-col{
+			color: #FFF;
+			display: flex;
+			width: 40%;
+			}
+
+			.footer-two-col a {
+			text-decoration: none;
+			color: hsla(0,0%,100%,.7);
+			display: flex;
+			flex-direction: column;
+			margin: 10px 0;
+			font-size: 14px;
+			}
+
+			.footer-three-col{
+			color: #FFF;
+			width: 22%;
+			padding: 0 12px;
+			}
+
+			.footer-registration{
+			display: block;
+			}
+
+			.footer-col-1, .footer-col-2, .footer-col-3 {
+			width: 90%;
+			padding: 0 12px;
+			}
+
+			.footer-two-col h3{
+			margin: 0 0 20px 0;
+			color: #FFF;
+			}
+
+			.footer-three-col h3{
+			margin: 0 0 20px 0;
+			}
+
+			.footer-three-col p {
+			margin: 16px 0;
+			font-size: 14px;
+			color: hsla(0,0%,100%,.7);
+			}
+
+
+			#footer-input{
+			width: 92%;
+			height: 40px;
+			border-radius: 36px;
+			border: none;
+			padding: 0 20px;
+			background-color: #272727;
+			color: hsla(0,0%,100%,.6);
+			font-family: Open Sans;
+			margin: 15px  0 25px 0; 
+			}
+
+			#footer-registration{
+			width: 130px;
+			height: 40px;
+			border: none;
+			border-radius: 36px;
+			background-color: #B80257;
+			color: #FFF;
+			text-transform: uppercase;
+			font-family: Open Sans;
+			font-size: 16px;
+			cursor: pointer;
+			}
+
+
+	body
+		div.navbar-top-bgr
+					img(src='../Images/bk.png')
+					div.navbar-menu
+						ul
+							li
+								a(href='/') Trang chủ
+							li
+								a(href='#') Thống kê
+							li
+								a(href='#') Dự báo
+					form.form-inline.my-2.my-lg-0
+						input.form-control.mr-sm-2(type='search' placeholder='Từ khóa')
+						button.btn.btn-info(type='submit') Tìm kiếm
+
+
+		.container.pt-5
+			block content
+
+		div.footer
+			div.footer-padding
+				div.footer-first-col
+					img(src='../Images/bk.png')
+					p Phần mềm hỗ trợ ra quyết định.
+					p Phân tích chi tiết các yếu tố tác động đến khả năng nghỉ việc của nhân viên.
+					p Đơn giản, dễ sử dụng, mang lại hiệu quả cao cho nhà quản lý.
+					p.footer-detail © 2019 MyCV JSC. All rights reserved.
+
+				div.footer-two-col
+					div.footer-col-1
+						h3 DSS
+						a(href="#") Giới thiệu
+						a(href="#") Câu hỏi thường gặp
+						a(href="#") Liên hệ	
+					div.footer-col-2
+						h3 Sản phẩm
+						a(href="#") Ứng dụng
+						a(href="#") Web
+							
+					div.footer-col-3
+						h3 Hỗ trợ
+						a(href="#") Hỗ trợ
+						a(href="#") Đóng góp
+				
+				div.footer-three-col
+					h3 Liên hệ mua bản quyền
+					p Nhập email để liên hệ với chúng tôi
+					input(id="footer-input" type="text" name="" placeholder="Email của bạn...")
+					button#footer-registration Liên hệ
+		
