@@ -6,3 +6,10 @@ module.exports.statistical = (req, res) => {
 		users: users
 	})
 }
+
+module.exports.statisticalRoom = (req, res) => {
+	var users = db.get('users').find({id: req.cookies.userCookie}).write();
+	res.render('Statistical/room', {
+		users: users
+	})
+}

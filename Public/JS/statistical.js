@@ -14,9 +14,9 @@ function drawChart() {
 	var options = {
 	  'title': 'Thống kê theo Attrition',
 	  'width': 360,
-	  'height': 300,
+	  'height': 250,
 	  is3D: true,
-	  colors:['red','yellow']
+	  colors:['red','black']
 	};
 
 	// Vẽ biểu đồ từ data và option đã khai báo
@@ -40,7 +40,7 @@ function drawChartDlv() {
 	var options = {
 	  'title': 'Thống kê nhân viên đang làm việc',
 	  'width': 360,
-	  'height': 300,
+	  'height': 250,
 	  is3D: true,
 	  colors:['blue','red']
 	};
@@ -66,7 +66,7 @@ function drawChartDnv() {
 	var options = {
 	  'title': 'Thống kê nhân viên đã nghỉ việc',
 	  'width': 360,
-	  'height': 300,
+	  'height': 250,
 	  is3D: true,
 	  colors:['red','green']
 	};
