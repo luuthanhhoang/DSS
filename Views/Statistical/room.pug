@@ -1,18 +1,52 @@
 html
 head
     title Thống kê
-    link(rel="stylesheet" href="CSS/main.CSS")
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
     script(src="https://kit.fontawesome.com/df221e2d29.js" crossorigin="anonymous")  
     script(type="text/javascript" src="https://www.gstatic.com/charts/loader.js")
     script(type="text/javascript").
         google.charts.load('current', {packages: ['corechart']});
+    style.
+        .wrapper {
+        display: grid;
+        grid-template-columns: 0.5fr 2.5fr;
+        }
+
+        .header{
+            grid-column: 1/3;
+        }
+
+        .left-header{
+            grid-row: 2/3;
+        }
+
+        .header nav p {
+            color: #FFF;
+        }
+
+        .left-header  h5 {
+            padding: 5px;
+            background-color: rgb(200, 200, 200);
+            color: blue;
+        }
+
+        .left-header ul li {
+            list-style: none;
+            padding: 3px;
+            color: #000;
+        }
+
+        .chart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
     
 body
     div.wrapper
         div.header
             nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
-                img(src="Images/bk.png" width="80" height="50" alt="")
                 span.navbar-brand Dashboard
                 button.navbar-toggler(type='button', data-toggle='collapse', data-target='  #navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
                     span.navbar-toggler-icon
@@ -23,7 +57,7 @@ body
                                 | Trang chủ
                                 span.sr-only (current)
                         li.nav-item.active
-                            a.nav-link(href='#')
+                            a.nav-link(href='/statistical')
                                 | Thống kê
                                 span.sr-only (current)
                         li.nav-item.active
@@ -42,26 +76,45 @@ body
                 h5 Dữ liệu
                 ul
                     li
-                        a(href="/statistical") Nhân viên
+                        a(href="/statistical/employees") Danh sách nhân viên
             div.left-tk
-                h5 Thống kê
+                h5 Thống kê - Báo cáo
                 ul
                     li
-                        a(href="/statistical/room") Phòng ban
-                    li 
-                        a(href="#") Tuổi
-                    li 
-                        a(href="#") Lương
-                    li 
-                        a(href="#") Chỉ số công việc - cuộc sống 
-                    li 
-                        a(href="#") Năm làm việc
-                    li 
-                        a(href="#") Mức độ hài lòng
+                        a(href="/statistical") Tổng quan dữ liệu
+                    li
+                        a(href="/statistical/room") Tương quan chung
 
             
         fiv.main 
           .container.pt-3
-            block content
+            h3 Thống kê chi tiết > Tương quan chung
+            
 
-    script(type="text/javascript" src="JS/statistical.js")
+
+    script.
+        google.charts.setOnLoadCallback(drawChartPb);
+
+        function drawChartPb() {
+        // Tạo data table
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Users');
+        data.addColumn('number', 'Total');
+        data.addRows([
+        ['Sales', 446],
+        ['Research & Development', 961],
+        ['Human Resources', 63]
+        ]);
+
+        // Set option của biểu đồ
+        var options = {
+        'title': 'Thống kê nhân viên theo phòng ban',
+        'width': 600,
+        'height': 350,
+        is3D: true
+        };
+
+        // Vẽ biểu đồ từ data và option đã khai báo
+        var chart = new google.visualization.PieChart(document.getElementById('chart-pb'));
+        chart.draw(data, options);
+        }

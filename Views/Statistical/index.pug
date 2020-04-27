@@ -1,7 +1,7 @@
 extends ../layout.statistical.pug
 
 block content
-    h3.mb-3 Thống kê chi tiết > Nhân viên
+    h3.mb-3 Thống kê chi tiết > Tổng quan dữ liệu
     .row.ml-5
         .card.text-white.bg-success.mr-5(style='max-width: 18rem;')
             .card-header Tổng nhân viên
@@ -20,17 +20,126 @@ block content
                 p.card-text Nam: 150 (chiếm 63.3%) <br> Nữ: 87 (chiếm 36.7%)
 
     h3.mt-3 Biểu đồ thống kê
+    h4.mt-3 1. Thống kê theo Attrition
     .chart
         #chart-nv 
         #chart-dlv
         #chart-dnv
-    h3 Tổng quan các trường dữ liệu
-        div.chart-tq
-            img.mt-2(src="Images/tq.png" style="width: 63rem")
-    h3 Tương quan các trường dữ liệu
-        div.chart-tq1
-            img.mt-2(src="Images/tq1.png" style="width: 50rem")
-    h3 Data nhân viên
-        div.data-nv
+    h4 2. Thống kê theo phòng ban
+    .chart-tpb
+        #chart-pb
+        table.table.mt-5
+            thead
+                tr
+                    th(scope='col') Department
+                    th(scope='col') Count
+            tbody
+                tr
+                    td Human Resources                  
+                    td 63
+                tr
+                    td Sales
+                    td 446
+                tr
+                    td Research & Development
+                    td 961
+
+    h4 3. Thống kê theo lĩnh vực giáo dục
+    .chart-lvgd
+        #chart-gd
+        table.table.mt-5
+            thead
+                tr
+                    th(scope='col') EducationField
+                    th(scope='col') Count
+            tbody
+                tr
+                    td Human Resources                  
+                    td 27
+                tr
+                    td Other 
+                    td 82
+                tr
+                    td Technical Degree
+                    td 132
+                tr
+                    td Marketing 
+                    td 159
+                tr
+                    td Medical
+                    td 464
+                tr
+                    td Life Sciences 
+                    td 606
+    h4 4. Thống kê theo vai trò công việc
+    .chart-tk-vtcv
+        #chart-vtcv
+        table.table.mt-5
+            thead
+                tr
+                    th(scope='col') JobRole
+                    th(scope='col') Count
+            tbody
+                tr
+                    td Human Resources                  
+                    td 52
+                tr
+                    td Research Scientist
+                    td 292
+                tr
+                    td Laboratory Technician
+                    td 259
+                tr
+                    td Manufacturing Director 
+                    td 145
+                tr
+                    td Healthcare Representative
+                    td 131
+                tr
+                    td Manager
+                    td 102
+                tr
+                    td Sales Representative 
+                    td 83
+                tr
+                    td Research Director
+                    td 80
+                tr
+                    td Human Resources 
+                    td 52
+    h4 5. Tình trạng hôn nhân
+    .chart-tk-hn
+        #chart-hn
+        table.table.mt-5
+            thead
+                tr
+                    th(scope='col') MaritalStatus
+                    th(scope='col') Count
+            tbody
+                tr
+                    td Married                 
+                    td 673
+                tr
+                    td Single
+                    td 470
+                tr
+                    td Divorced
+                    td 327
+    h4 6. Làm thêm giờ
+    .chart-tk-ltg
+        #chart-ltg
+        table.table.mt-5
+            thead
+                tr
+                    th(scope='col') OverTime
+                    th(scope='col') Count
+            tbody
+                tr
+                    td No                  
+                    td 1054
+                tr
+                    td Yes
+                    td 416
+              
             
 

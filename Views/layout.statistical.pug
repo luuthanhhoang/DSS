@@ -1,7 +1,7 @@
 html
 head
     title Thống kê
-    link(rel="stylesheet" href="CSS/main.CSS")
+    link(rel="stylesheet" href="CSS/main.css")
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
     script(src="https://kit.fontawesome.com/df221e2d29.js" crossorigin="anonymous")  
     script(type="text/javascript" src="https://www.gstatic.com/charts/loader.js")
@@ -12,7 +12,6 @@ body
     div.wrapper
         div.header
             nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
-                img(src="Images/bk.png" width="80" height="50" alt="")
                 span.navbar-brand Dashboard
                 button.navbar-toggler(type='button', data-toggle='collapse', data-target='  #navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
                     span.navbar-toggler-icon
@@ -42,23 +41,14 @@ body
                 h5 Dữ liệu
                 ul
                     li
-                        a(href="/statistical") Nhân viên
+                        a(href="/statistical/employees") Nhân viên
             div.left-tk
-                h5 Thống kê
+                h5 Thống kê - Báo cáo
                 ul
                     li
-                        a(href="/statistical/room") Phòng ban
-                    li 
-                        a(href="#") Tuổi
-                    li 
-                        a(href="#") Lương
-                    li 
-                        a(href="#") Chỉ số công việc - cuộc sống 
-                    li 
-                        a(href="#") Năm làm việc
-                    li 
-                        a(href="#") Mức độ hài lòng
-
+                        a(href="/statistical") Tổng quan dữ liệu
+                    li
+                        a(href="/statistical/room") Tương quan chung
             
         fiv.main 
           .container.pt-3

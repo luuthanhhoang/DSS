@@ -2,7 +2,6 @@ var db = require('../Database/db.js')
 const shortid = require('shortid')
 
 module.exports.login = (req, res) => {
-	console.log(req.cookies)
 	res.render('Auth/login')
 };
 
