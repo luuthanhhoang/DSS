@@ -1,0 +1,175 @@
+extends ../layout.statistical.pug
+
+block content
+	style.
+		.wrapper {
+		display: grid;
+		grid-template-columns: 0.5fr 2.5fr;
+		}
+
+		.header{
+		grid-column: 1/3;
+		}
+
+		.left-header{
+		grid-row: 2/3;
+		}
+
+		.header nav p {
+		color: #FFF;
+		}
+
+		.left-header  h5 {
+		padding: 5px;
+		background-color: rgb(200, 200, 200);
+		color: blue;
+		}
+
+		.left-header ul li {
+		list-style: none;
+		padding: 3px;
+		color: #000;
+		}
+		.table-wrap{
+		display: flex;
+		}
+		.table-chi{
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		}
+
+	h3.ml-3 Chi tiết nhân viên 
+	- var id = "Mã Id: " + employee.Id
+	p.ml-5= id
+	div.table-wrap
+		div.table-con.ml-5.mr-5
+			table.table
+				thead
+					tr
+						th(scope='col') Trường
+						th(scope='col') Dữ liệu
+				each val, key in employee
+					tbody
+						tr
+							td= key
+							td= val
+		div.table-chi.ml-5
+			h4 Education
+			table.table
+				tbody
+					tr
+						td 1
+						td Below College
+					tr
+						td 2
+						td College
+					tr
+						td 3
+						td Bachelor
+					tr
+						td 4
+						td Master
+					tr
+						td 5
+						td Doctor
+
+			h4 EnvironmentSatisfaction
+
+			table.table
+				tbody
+					tr
+						td 1
+						td Low
+					tr
+						td 2
+						td Medium
+					tr
+						td 3
+						td High
+					tr
+						td 4
+						td Very High
+			h4 JobInvolvement
+
+			table.table
+				tbody
+					tr
+						td 1
+						td Low
+					tr
+						td 2
+						td Medium
+					tr
+						td 3
+						td High
+					tr
+						td 4
+						td Very High
+			h4 JobSatisfaction
+
+			table.table
+				tbody
+					tr
+						td 1
+						td Low
+					tr
+						td 2
+						td Medium
+					tr
+						td 3
+						td High
+					tr
+						td 4
+						td Very High
+			h4 PerformanceRating
+
+			table.table
+				tbody
+					tr
+						td 1
+						td Low
+					tr
+						td 2
+						td Good
+					tr
+						td 3
+						td Excellent
+					tr
+						td 4
+						td Outstanding
+
+			h4 RelationshipSatisfaction
+
+			table.table
+				tbody
+					tr
+						td 1
+						td Low
+					tr
+						td 2
+						td Medium
+					tr
+						td 3
+						td High
+					tr
+						td 4
+						td Very High
+			h4 WorkLifeBalance
+
+			table.table
+				tbody
+					tr
+						td 1
+						td Bad
+					tr
+						td 2
+						td Good
+					tr
+						td 3
+						td Better
+					tr
+						td 4
+						td Best
+

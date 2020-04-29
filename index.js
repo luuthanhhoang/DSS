@@ -26,9 +26,21 @@ app.get('/', (req, res) => {
 app.use('/auth', authRouter)
 app.use('/statistical', authMidderware.authLogin, statisticalRouter)
 
-app.use(express.static('public'))
+app.use(express.static('Public'))
 
 app.listen(port, () => {
     console.log('This server is starting at ', port);
 });
+
+
+// var employees = db.get('Employees').value()
+
+// function groupBy(array, num) {
+//   var emps = array.filter(item => {
+//   	return parseInt(item.YearsAtCompany) === num
+//   })
+//   return emps.length;
+// }
+
+// console.log(groupBy(employees, 50))
 

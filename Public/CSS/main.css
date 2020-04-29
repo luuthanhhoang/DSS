@@ -36,3 +36,9 @@
 .chart-tpb, .chart-lvgd, .chart-tk-vtcv, .chart-tk-hn, .chart-tk-ltg {
 	display: flex;
 }
+
+.chart-tpb1{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

@@ -28,7 +28,7 @@ module.exports.postLogin = (req, res) => {
 		return;
 	}
 	res.cookie('userCookie', user.id)
-	res.redirect('/statistical')
+	res.redirect('/statistical/employees')
 };
 
 

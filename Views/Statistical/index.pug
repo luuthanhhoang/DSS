@@ -2,30 +2,16 @@ extends ../layout.statistical.pug
 
 block content
     h3.mb-3 Thống kê chi tiết > Tổng quan dữ liệu
-    .row.ml-5
+    .chart-tpb1
         .card.text-white.bg-success.mr-5(style='max-width: 18rem;')
             .card-header Tổng nhân viên
             .card-body
                 h5.card-title Tổng số: 1470 nhân viên
-                p.card-text Đang làm việc: 1233 (chiếm 83.1%) <br> Đã nghỉ việc: 237 (chiếm 16.9%)
-        .card.text-white.bg-danger.mr-5(style='max-width: 18rem;')
-            .card-header Đang làm việc
-            .card-body
-                h5.card-title Tổng số: 1233 nhân viên
-                p.card-text Nam: 732 (chiếm 59.4%) <br> Nữ: 501 (chiếm 40.6%)
-        .card.text-white.bg-primary.mr-5(style='max-width: 18rem;')
-            .card-header Đã nghỉ việc
-            .card-body
-                h5.card-title Tổng số: 237 nhân viên
-                p.card-text Nam: 150 (chiếm 63.3%) <br> Nữ: 87 (chiếm 36.7%)
+                p.card-text Nam: 882 (chiếm 60%) <br> Nữ: 588 (chiếm 40%)
+        #chart-nn
 
     h3.mt-3 Biểu đồ thống kê
-    h4.mt-3 1. Thống kê theo Attrition
-    .chart
-        #chart-nv 
-        #chart-dlv
-        #chart-dnv
-    h4 2. Thống kê theo phòng ban
+    h4 1. Thống kê theo phòng ban
     .chart-tpb
         #chart-pb
         table.table.mt-5
@@ -44,7 +30,7 @@ block content
                     td Research & Development
                     td 961
 
-    h4 3. Thống kê theo lĩnh vực giáo dục
+    h4 2. Thống kê theo lĩnh vực giáo dục
     .chart-lvgd
         #chart-gd
         table.table.mt-5
@@ -71,7 +57,7 @@ block content
                 tr
                     td Life Sciences 
                     td 606
-    h4 4. Thống kê theo vai trò công việc
+    h4 3. Thống kê theo vai trò công việc
     .chart-tk-vtcv
         #chart-vtcv
         table.table.mt-5
@@ -107,7 +93,7 @@ block content
                 tr
                     td Human Resources 
                     td 52
-    h4 5. Tình trạng hôn nhân
+    h4 4. Tình trạng hôn nhân
     .chart-tk-hn
         #chart-hn
         table.table.mt-5
@@ -125,7 +111,7 @@ block content
                 tr
                     td Divorced
                     td 327
-    h4 6. Làm thêm giờ
+    h4 5. Làm thêm giờ
     .chart-tk-ltg
         #chart-ltg
         table.table.mt-5
@@ -140,6 +126,27 @@ block content
                 tr
                     td Yes
                     td 416
-              
-            
+
+    h4 6. Chỉ số cân bằng công việc - cuộc sống
+    .chart-tk-ltg
+        #chart-cb
+        table.table.mt-5
+            thead
+                tr
+                    th(scope='col') WorkLifeBalance
+                    th(scope='col') Count
+            tbody
+                tr
+                    td Bad                 
+                    td 80
+                tr
+                    td Good
+                    td 344
+                tr
+                    td Better
+                    td 893 
+                tr
+                    td Best
+                    td 153
+          
 
