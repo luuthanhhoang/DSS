@@ -9,6 +9,7 @@ var cookieParser = require('cookie-parser')
 
 var authRouter = require('./Routers/auth.router.js')
 var statisticalRouter = require('./Routers/statistical.router')
+var predictRouter = require('./Routers/predict.router.js')
 
 var authMidderware = require('./Midderwares/auth.midderware')
 
@@ -25,6 +26,7 @@ app.get('/', (req, res) => {
 
 app.use('/auth', authRouter)
 app.use('/statistical', authMidderware.authLogin, statisticalRouter)
+app.use('/predict', authMidderware.authLogin, predictRouter)
 
 app.use(express.static('Public'))
 
@@ -33,14 +35,4 @@ app.listen(port, () => {
 });
 
 
-// var employees = db.get('Employees').value()
-
-// function groupBy(array, num) {
-//   var emps = array.filter(item => {
-//   	return parseInt(item.YearsAtCompany) === num
-//   })
-//   return emps.length;
-// }
-
-// console.log(groupBy(employees, 50))
 

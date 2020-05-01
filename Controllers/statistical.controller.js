@@ -2,8 +2,18 @@ var db = require('../Database/db.js')
 
 module.exports.statistical = (req, res) => {
 	var users = db.get('users').find({id: req.cookies.userCookie}).write();
+	var employees = db.get('Employees').value()
+	var male = employees.filter((item) => {
+		return item.Gender === "Male"
+	})
+	var feMale = employees.filter((item) => {
+		return item.Gender === "Female"
+	})
 	res.render('Statistical/index', {
-		users: users
+		users: users,
+		employees: employees,
+		male: male,
+		feMale: feMale
 	})
 }
 
@@ -41,7 +51,7 @@ module.exports.postUpdateEmployee = (req, res) => {
 	var emp = req.body
 	db.get('Employees').remove({ Id: id }).write()
 	db.get('Employees').push(emp).write()
-	console.log(db.get('Employees').value())
+	res.redirect('/statistical/employees')
 }
 
 module.exports.deleteEmployee = (req, res) => {

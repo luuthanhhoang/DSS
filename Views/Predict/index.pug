@@ -1,0 +1,62 @@
+extends ../layout.statistical.pug
+
+block content
+	h3 Kết quả dự báo
+	h4.ml-3 > Dự báo theo phòng ban
+	.chart-pre.d-flex
+		#chart-department
+		table.table.mt-5
+			thead
+				tr
+					th(scope='col') Department
+					th(scope='col') AttritionRate (%)
+			tbody
+				tr
+					td Human Resources                  
+					td 36.5
+				tr
+					td Sales
+					td 41.25 
+				tr
+					td Research & Development
+					td 27.47
+
+	h4.ml-3 > Dự báo theo chức vụ
+	.chart-pre.d-flex
+		#chart-jobRole
+		table.table.mt-5
+			thead
+				tr
+					th(scope='col') JobRole
+					th(scope='col') AttritionRate (%)
+			tbody
+				tr
+					td Sales Executive                  
+					td 34.36
+				tr
+					td Research Scientist
+					td 7.88
+				tr
+					td Laboratory Technician
+					td 32.43
+				tr
+					td Manufacturing Director 
+					td 86.2
+				tr
+					td Healthcare Representative
+					td 22.9
+				tr
+					td Manager
+					td 18.63
+				tr
+					td Sales Representative 
+					td 8.43
+				tr
+					td Research Director
+					td 82.5
+				tr
+					td Human Resources 
+					td 9.62
+
+	h4.ml-3 > Chi tiết dự báo nhân viên
+	a.btn.btn-primary(href="/predict/employees").ml-5.mt-3.mr-5.mb-5 Chi tiết dự báo nhân viên
