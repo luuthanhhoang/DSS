@@ -6,8 +6,8 @@ function drawChartPreD() {
 	data.addColumn('string', 'Users');
 	data.addColumn('number', 'Total');
 	data.addRows([
-		['Sales', 41.25],
-		['Research & Development', 27.47],
+		['Sales', 43.75],
+		['Research & Development', 34],
 		[' Human Resource', 36.5]
 	]);
 
@@ -31,15 +31,15 @@ function drawChartJobRole() {
 	data.addColumn('string', 'Users');
 	data.addColumn('number', 'Total');
 	data.addRows([
-		['Sales Executive',              34.36],
-		['Research Scientist',           7.88],
-		['Laboratory Technician',        32.43],
-		['Manufacturing Director',       86.2],
-		['Healthcare Representative',    22.9],
-		['Manager',                      18.63],
-		['Sales Representative',          8.43],
-		['Research Director',             82.5],
-		['Human Resources' ,              9.62]
+		['Sales Executive',              39.66],
+		['Research Scientist',           35.8],
+		['Laboratory Technician',        30.43],
+		['Manufacturing Director',       34.38],
+		['Healthcare Representative',    37.84],
+		['Manager',                      47.37],
+		['Sales Representative',          26.32],
+		['Research Director',             31.58],
+		['Human Resources' ,              40]
 	]);
 
 	// Set option của biểu đồ

@@ -66,7 +66,7 @@ block content
 					
 		
 		h3 Chi tiết dự báo nhân viên nghỉ việc 					
-		#table-pro-emp
+		#table-pro-emp 
 			table.table.mt-3
 				thead
 					tr
@@ -77,7 +77,7 @@ block content
 						th(scope='col') JobRole
 						th(scope='col') AttritionRate
 						th(scope='col') Attrition
-				each emp in employeePre
+				each emp in empGroup3
 					tbody
 						tr
 							td= emp.Id
